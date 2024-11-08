@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: monospace;
+}
+
+#d {
+    font-size: 1.2rem;
+    white-space: pre;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+#marca-agua {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.08);
+    font-size: 3rem;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1000;
+}
