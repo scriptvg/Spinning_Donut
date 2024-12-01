@@ -7,8 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <pre id="d"></pre>
+    <div id="ASCII"><pre id="d"></pre></div>
     <div id="marca-agua">ScriptVg</div>
+    <button id="themebtn" onclick="cambiarTema()">Cambiar Tema</button>
+    <label for="speed">Velocidad de rotación:</label>
+    <input type="range" min="1" max="100" value="50" class="slider" id="speed">
     <script src="script.js"></script>
+    <script>
+        function cambiarTema() {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+        }
+    </script>
 </body>
 </html>
