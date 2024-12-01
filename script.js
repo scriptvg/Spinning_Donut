@@ -6,7 +6,7 @@
         var asciiframe=function() {
             var b=[];
             var z=[];
-            A += 0.07;
+            A += 0.05;
             B += 0.03;
             var cA=Math.cos(A), sA=Math.sin(A),
                 cB=Math.cos(B), sB=Math.sin(B);
@@ -14,7 +14,7 @@
                 b[k]=k%80 == 79 ? "\n" : " ";
                 z[k]=0;
             }
-            for(var j=0;j<6.28;j+=0.07) {
+            for(var j=0;j<6.28;j+=0.05) {
                 var ct=Math.cos(j),st=Math.sin(j);
                 for(i=0;i<6.28;i+=0.02) {
                     var sp=Math.sin(i),cp=Math.cos(i),
@@ -36,7 +36,7 @@
             pretag.innerHTML = b.join("");
         };
 
-        setInterval(asciiframe, 50);
+        setInterval(asciiframe, 40);
     };
 
     if(document.all)
@@ -45,3 +45,8 @@
         window.addEventListener("load",_onload,false);
 })();
 
+var themebtn = document.getElementById('themebtn');
+themebtn.addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+});
