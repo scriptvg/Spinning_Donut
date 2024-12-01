@@ -9,14 +9,16 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: monospace;
+    transition: background 0.5s ease-in-out;
 }
 
 #d {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     white-space: pre;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
-    transition: transform 0.2s ease-in-out;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
 #marca-agua {
@@ -24,10 +26,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.08);
-    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.1);
+    font-size: 3.5rem;
     text-align: center;
     pointer-events: none;
     user-select: none;
     z-index: 1000;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#themebtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #2f2f2f, #4f4f4f);
+    color: #fff;
+}
+
+body.light {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
 }
